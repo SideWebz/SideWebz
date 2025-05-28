@@ -1,0 +1,38 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/banner.css" />
+    {{#if stylesheet}}
+      <link rel="stylesheet" href="/css/{{stylesheet}}.css" />
+    {{/if}}
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  </head>
+  <body>
+    {{> navbar}}
+
+    {{> banner}}
+
+    {{{body}}}
+
+    {{> footer}}
+
+<script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/TextPlugin.min.js"></script>
+
+
+
+    <script src="/js/hamburger.js"></script>
+    
+    <script src="/js/bannerTypewriter.js"></script>
+        <!-- Voeg deze toe voor home pagina -->
+    {{#if isHome}}
+      <script src="/js/gsapp.js"></script>
+      <script src="/js/scroll.js"></script>
+    {{/if}}
+  </body>
+</html>

@@ -1,0 +1,107 @@
+.intro {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.intro h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 0.5rem;
+}
+
+.intro p {
+    font-size: 1.25rem;
+    color: #555;
+}
+
+.site-types {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    position: relative;
+}
+
+/* Artikelen */
+.site-type {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+    max-width: 600px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Afwisselende uitlijning */
+.site-type.left {
+    text-align: left;
+    margin-left: 0;
+}
+
+.site-type.right {
+    text-align: right;
+    margin-left: auto;
+}
+
+.site-type.center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Titels */
+.site-type h3 {
+    font-size: 2rem;
+    color: #1e40af; /* stoer blauw */
+    margin-bottom: 1rem;
+}
+
+/* Vormen tussen artikelen */
+.shape {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    border-radius: 50% 20% 50% 20% / 40% 60% 40% 60%;
+    filter: drop-shadow(0 5px 5px rgba(59,130,246,0.4));
+    transform: rotate(15deg);
+}
+
+/* Variatie in vorm */
+.shape1 {
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    transform: rotate(15deg);
+}
+
+.shape2 {
+    background: linear-gradient(135deg, #ef4444, #f87171);
+    transform: rotate(-15deg);
+}
+
+/* Responsief: op bredere schermen naast elkaar */
+@media (min-width: 900px) {
+    .site-types {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+        gap: 4rem;
+    }
+
+    /* Vormen verbergen op desktop want ze gaan tussen de kolommen */
+    .shape {
+        display: none;
+    }
+
+    .site-type {
+        max-width: 320px;
+        padding: 2.5rem;
+    }
+
+    /* Zorg dat uitlijning gelijk is op desktop, alle tekst links voor consistentie */
+    .site-type {
+        text-align: left !important;
+        margin: 0 !important;
+    }
+}

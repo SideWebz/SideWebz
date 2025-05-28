@@ -1,0 +1,30 @@
+.banner {
+  width: 100%;
+  background-color: rgb(44, 44, 44);  /* donkere achtergrond */
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  user-select: none;
+  text-align: center;
+}
+.typing-cursor {
+  display: inline-block;
+  margin-left: 2px;
+  animation: blink 0.7s infinite;
+  font-weight: bold;
+  color: rgb(255, 255, 255); /* typ-streepje in groen voor sfeer, pas gerust aan */
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@media (max-width: 768px) {
+.banner-text{
+    font-size: 1.5em;
+}
+}
+
