@@ -1,20 +1,27 @@
 .banner {
   width: 100%;
-  background-color: rgb(44, 44, 44);  /* donkere achtergrond */
+  background-color: #000;
   color: #fff;
-  font-family: 'Poppins', sans-serif;
-  font-size: 2rem;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  font-family: 'Inter', sans-serif;
   user-select: none;
   text-align: center;
 }
+
+.banner-text {
+  margin: 0;
+}
+
 .typing-cursor {
   display: inline-block;
   margin-left: 2px;
   animation: blink 0.7s infinite;
   font-weight: bold;
-  color: rgb(255, 255, 255); /* typ-streepje in groen voor sfeer, pas gerust aan */
+  color: #fff;
+}
+header.banner h1.banner-text {
+  font-size: 4rem;
+  color: white;
+  font-weight: bold;
 }
 
 @keyframes blink {
@@ -23,8 +30,8 @@
 }
 
 @media (max-width: 768px) {
-.banner-text{
-    font-size: 1.5em;
-}
+  header.banner h1.banner-text {
+  font-size: 3rem;
 }
 
+}

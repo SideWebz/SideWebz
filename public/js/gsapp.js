@@ -1,33 +1,38 @@
+// gsapp.js
 gsap.registerPlugin(ScrollTrigger);
 
-const wheel = document.querySelector('.sticky-circle');
-
-// Cirkel rotatie + sticky pin tijdens scroll
-gsap.to(wheel, {
-  rotation: 360,
-  ease: 'none',
-  scrollTrigger: {
-    trigger: 'main',
-    start: 'top top',
-    end: '+=350',
-    scrub: 0.3,
-    pin: true,
-    anticipatePin: 1,
-    onLeave: () => {
-      // Na 1 rotatie wordt pin losgelaten, de cirkel gaat mee omhoog
-      // (geen extra code nodig, pin=true regelt dat)
-    },
-    onEnterBack: () => {
-      // Terug omhoog, cirkel wordt sticky en draait terug
-    }
-  }
+gsap.utils.toArray('.gsap-fade').forEach(el => {
+  gsap.from(el, {
+    opacity: 0,
+    y: 30,
+    duration: 0.8,
+    scrollTrigger: el
+  });
 });
 
-// Intro fade-in animatie van de tekst
-gsap.from('section.text-center', {
-  opacity: 0,
-  y: 40,
-  duration: 1,
-  ease: "power2.out",
-  delay: 0.3
+gsap.utils.toArray('.gsap-up').forEach(el => {
+  gsap.from(el, {
+    opacity: 0,
+    y: 50,
+    duration: 0.6,
+    scrollTrigger: el
+  });
+});
+
+gsap.utils.toArray('.gsap-left').forEach(el => {
+  gsap.from(el, {
+    opacity: 0,
+    x: -60,
+    duration: 0.7,
+    scrollTrigger: el
+  });
+});
+
+gsap.utils.toArray('.gsap-right').forEach(el => {
+  gsap.from(el, {
+    opacity: 0,
+    x: 60,
+    duration: 0.7,
+    scrollTrigger: el
+  });
 });

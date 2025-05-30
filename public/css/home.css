@@ -1,107 +1,190 @@
-.intro {
-    text-align: center;
-    margin-bottom: 3rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+.poiret-one-regular {
+  font-family: "Poiret One", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
-.intro h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #222;
-    margin-bottom: 0.5rem;
+/* Accent kleuren */
+.accent-color {
+  color: #0069ff;
+  font-weight: 600;
 }
 
-.intro p {
-    font-size: 1.25rem;
-    color: #555;
+.accent-color:hover {
+  color: #004bb5;
+  text-decoration: none;
 }
 
-.site-types {
-    display: flex;
+/* Buttons */
+.btn-gradient {
+  display: inline-block;
+  padding: 0.65rem 1.75rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: rgb(39, 39, 39) !important;
+  background: linear-gradient(90deg, #ffffff 0%, #a7a7a7 100%);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.7s ease !important;
+  text-decoration: none;
+
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(90deg, #838383 0%, #5a5a5a 100%);
+  text-decoration: none;
+  color: white !important;
+}
+
+/* HEADER */
+.custom-header {
+  background-color: #000;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  color: white;
+  width: 100%;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.header-inner {
+  width: 80vw;
+  margin: 0 auto;
+  gap: 3rem;
+}
+
+.text-content h1 {
+  font-size: 3.25rem;
+  letter-spacing: 0.07em;
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+}
+
+.text-content p.lead {
+  font-size: 1.25rem;
+  max-width: 600px;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+/* Header image styling */
+.header-img {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  position: relative;
+  z-index: 2;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.header-img:hover {
+  transform: scale(1.05);
+}
+
+
+/* Sections spacing */
+section {
+  padding-left: 3vw;
+  padding-right: 3vw;
+}
+
+/* What we do */
+.what-we-do-section h2 {
+  font-size: 2.75rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5rem;
+}
+
+.what-we-do-section p.lead {
+  font-size: 1.15rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+/* Features and values sections */
+.features-section,
+.values-section {
+  background-color: #f9f9f9;
+}
+
+.features-section h2,
+.values-section h2 {
+  font-size: 2.5rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+
+.feature-card,
+.value-card {
+  transition: transform 0.3s ease;
+  cursor: default;
+  user-select: none;
+}
+
+.feature-card:hover,
+.value-card:hover {
+  transform: translateY(-6px);
+}
+
+.feature-icon,
+.value-icon {
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover .feature-icon,
+.value-card:hover .value-icon {
+  transform: scale(1.15);
+}
+
+/* Text alignment */
+.feature-card h5,
+.value-card h5 {
+  font-family: "Poiret One", cursive;
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Tech stack section */
+.tech-stack-section h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 991px) {
+  .header-inner {
+    width: 90vw;
     flex-direction: column;
-    gap: 3rem;
-    position: relative;
+  }
+  .text-content h1 {
+    font-size: 2.25rem;
+  }
+  .header-img {
+    max-width: 100%;
+    margin-top: 2rem;
+  }
+  section {
+    padding-left: 4vw;
+    padding-right: 4vw;
+  }
 }
 
-/* Artikelen */
-.site-type {
-    background-color: #ffffff;
-    padding: 2rem;
-    border-radius: 1.5rem;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
-    max-width: 600px;
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
-
-/* Afwisselende uitlijning */
-.site-type.left {
-    text-align: left;
-    margin-left: 0;
-}
-
-.site-type.right {
-    text-align: right;
-    margin-left: auto;
-}
-
-.site-type.center {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Titels */
-.site-type h3 {
-    font-size: 2rem;
-    color: #1e40af; /* stoer blauw */
-    margin-bottom: 1rem;
-}
-
-/* Vormen tussen artikelen */
-.shape {
-    width: 100px;
-    height: 100px;
-    margin: 0 auto;
-    background: linear-gradient(135deg, #2563eb, #3b82f6);
-    border-radius: 50% 20% 50% 20% / 40% 60% 40% 60%;
-    filter: drop-shadow(0 5px 5px rgba(59,130,246,0.4));
-    transform: rotate(15deg);
-}
-
-/* Variatie in vorm */
-.shape1 {
-    background: linear-gradient(135deg, #2563eb, #3b82f6);
-    transform: rotate(15deg);
-}
-
-.shape2 {
-    background: linear-gradient(135deg, #ef4444, #f87171);
-    transform: rotate(-15deg);
-}
-
-/* Responsief: op bredere schermen naast elkaar */
-@media (min-width: 900px) {
-    .site-types {
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: flex-start;
-        gap: 4rem;
-    }
-
-    /* Vormen verbergen op desktop want ze gaan tussen de kolommen */
-    .shape {
-        display: none;
-    }
-
-    .site-type {
-        max-width: 320px;
-        padding: 2.5rem;
-    }
-
-    /* Zorg dat uitlijning gelijk is op desktop, alle tekst links voor consistentie */
-    .site-type {
-        text-align: left !important;
-        margin: 0 !important;
-    }
+@media (max-width: 576px) {
+  .text-content h1 {
+    font-size: 1.8rem;
+  }
+  .btn-gradient {
+    font-size: 1rem;
+    padding: 0.5rem 1.2rem;
+  }
 }
