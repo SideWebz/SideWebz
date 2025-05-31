@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
 
 .poiret-one-regular {
-  font-family: "Poiret One", cursive;
+  font-family: "Inter", cursive;
   font-weight: 400;
   font-style: normal;
 }
@@ -113,7 +113,7 @@ section {
 /* Features and values sections */
 .features-section,
 .values-section {
-  background-color: #f9f9f9;
+  background-color: #cccccc;
 }
 
 .features-section h2,
@@ -187,4 +187,10 @@ section {
     font-size: 1rem;
     padding: 0.5rem 1.2rem;
   }
+}
+.bg-white{
+  background-color: #ebebeb !important;
+}
+.bg-light{
+    background-color: #ebebeb !important;
 }

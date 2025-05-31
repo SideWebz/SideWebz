@@ -110,3 +110,27 @@ a:hover {
 .footer-bottom {
   color: #777;
 }
+/* Sticky wrapper zorgt dat navbar sticky is */
+.navbar-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Navbar zelf position relative zodat absolute kinderen zich erop baseren */
+.navbar {
+  position: relative;
+  background-color: #121212;
+  color: white;
+  padding: 1rem;
+}
+
+#scrollProgress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 0%;
+  background: linear-gradient(to right, #00bfff, #00ffcc);
+  z-index: 9999;
+}

@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   tl.to(mobileMenu, {
     y: 0,
     opacity: 1,
-    duration: 0.5,
+    duration: 0.2,
     ease: "power4.out",
     onStart: () => {
       mobileMenu.classList.add("open");

@@ -1,16 +1,23 @@
-<nav class="navbar bg-darkgray text-white px-4 py-3 d-flex justify-content-between align-items-center sticky-top">
-  <a href="/" class="navbar-brand fw-bold fs-4 text-white">SIDEWEBZ</a>
+<!-- Sticky wrapper voor navbar -->
+<div class="navbar-wrapper">
+  <nav class="navbar bg-darkgray text-white px-4 py-3 d-flex justify-content-between align-items-center position-relative">
+    <!-- Scroll progress bar -->
+    <div id="scrollProgress"></div>
 
-  <div class="d-none d-md-flex gap-4">
-    <a href="/projects" class="text-white fw-semibold">Projecten</a>
-    <a href="/contact" class="text-white fw-semibold">Contact</a>
-  </div>
+    <a href="/" class="navbar-brand fw-bold fs-4 text-white">SIDEWEBZ</a>
 
-  <div class="burger d-md-none" id="burger">
-    <span></span><span></span><span></span>
-  </div>
-</nav>
+    <div class="d-none d-md-flex gap-4">
+      <a href="/projects" class="text-white fw-semibold">Projecten</a>
+      <a href="/contact" class="text-white fw-semibold">Contact</a>
+    </div>
 
+    <div class="burger d-md-none" id="burger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+</div>
+
+<!-- Mobile menu -->
 <div class="mobile-menu" id="mobileMenu">
   <a class="mb-link" href="/projects">Projecten</a>
   <a class="mb-link" href="/contact">Contact</a>
