@@ -1,21 +1,10 @@
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
 
-.poiret-one-regular {
+.Inter {
   font-family: "Inter", cursive;
   font-weight: 400;
   font-style: normal;
-}
-
-/* Accent kleuren */
-.accent-color {
-  color: #0069ff;
-  font-weight: 600;
-}
-
-.accent-color:hover {
-  color: #004bb5;
-  text-decoration: none;
 }
 
 /* Buttons */
@@ -25,32 +14,29 @@
   font-size: 1.125rem;
   font-weight: 600;
   color: rgb(39, 39, 39) !important;
-  background: linear-gradient(90deg, #ffffff 0%, #a7a7a7 100%);
-  border: none;
+  background-color: white;
+  border: solid 2px white;
   border-radius: 50px;
   cursor: pointer;
-  transition: background 0.7s ease !important;
   text-decoration: none;
-
+  transition: all 0.3s ease;
 }
 
 .btn-gradient:hover {
-  background: linear-gradient(90deg, #838383 0%, #5a5a5a 100%);
-  text-decoration: none;
   color: white !important;
+  background-color: transparent;
+  text-decoration: none;
+  border: solid 2px white;
 }
 
 /* HEADER */
 .custom-header {
   background-color: #000;
-  padding-left: 2vw;
-  padding-right: 2vw;
   color: white;
+  padding: 6rem 2vw;
   width: 100%;
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-  position: relative;
   overflow: hidden;
+  position: relative;
 }
 
 .header-inner {
@@ -79,85 +65,15 @@
   width: 100%;
   height: auto;
   border-radius: 1rem;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-  position: relative;
-  z-index: 2;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s ease;
   cursor: pointer;
+  position: relative;
+  z-index: 2;
 }
 
 .header-img:hover {
   transform: scale(1.05);
-}
-
-
-/* Sections spacing */
-section {
-  padding-left: 3vw;
-  padding-right: 3vw;
-}
-
-/* What we do */
-.what-we-do-section h2 {
-  font-size: 2.75rem;
-  letter-spacing: 0.1em;
-  margin-bottom: 1.5rem;
-}
-
-.what-we-do-section p.lead {
-  font-size: 1.15rem;
-  font-weight: 400;
-  margin-bottom: 1rem;
-}
-
-/* Features and values sections */
-.features-section,
-.values-section {
-  background-color: #cccccc;
-}
-
-.features-section h2,
-.values-section h2 {
-  font-size: 2.5rem;
-  letter-spacing: 0.1em;
-  margin-bottom: 1rem;
-}
-
-.feature-card,
-.value-card {
-  transition: transform 0.3s ease;
-  cursor: default;
-  user-select: none;
-}
-
-.feature-card:hover,
-.value-card:hover {
-  transform: translateY(-6px);
-}
-
-.feature-icon,
-.value-icon {
-  transition: transform 0.3s ease;
-}
-
-.feature-card:hover .feature-icon,
-.value-card:hover .value-icon {
-  transform: scale(1.15);
-}
-
-/* Text alignment */
-.feature-card h5,
-.value-card h5 {
-  font-family: "Poiret One", cursive;
-  font-weight: 400;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-/* Tech stack section */
-.tech-stack-section h3 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
 }
 
 /* Responsive tweaks */
@@ -166,13 +82,16 @@ section {
     width: 90vw;
     flex-direction: column;
   }
+
   .text-content h1 {
     font-size: 2.25rem;
   }
+
   .header-img {
     max-width: 100%;
     margin-top: 2rem;
   }
+
   section {
     padding-left: 4vw;
     padding-right: 4vw;
@@ -183,14 +102,30 @@ section {
   .text-content h1 {
     font-size: 1.8rem;
   }
+
   .btn-gradient {
     font-size: 1rem;
     padding: 0.5rem 1.2rem;
   }
 }
-.bg-white{
-  background-color: #ebebeb !important;
+
+
+/* Afwisselende sections */
+.section-light {
+  background-color: #f9f9f9;
+  color: #222;
 }
-.bg-light{
-    background-color: #ebebeb !important;
+
+.section-dark {
+  background-color: #000000;
+  color: white;
+}
+
+/* Card responsive en animatie ondersteuning */
+.img-fluid{
+  max-width: 700px;
+  width: 100%;
+}
+.color-blue{
+  color: #0a58caab;
 }
