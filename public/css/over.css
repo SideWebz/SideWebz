@@ -76,6 +76,80 @@
   transform: scale(1.05);
 }
 
+/* Afwisselende sections */
+.section-light {
+  background-color: #f9f9f9;
+  color: #222;
+}
+
+.section-dark {
+  background-color: #000000;
+  color: white;
+}
+
+/* Team cards */
+.card {
+  background: transparent;
+}
+
+.card-title {
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
+
+.card-text {
+  color: #555;
+}
+
+/* Algemene responsive spacing */
+.img-fluid {
+  max-width: 700px;
+  width: 100%;
+}
+
+.color-blue {
+  color: #252435;
+}
+
+.rounded-circle {
+  border-radius: 50% !important;
+  object-fit: cover;
+}
+
+.thin {
+  font-weight: 100;
+}
+
+.kop {
+  color: #33314a;
+}
+
+.soft-text {
+  color: rgb(79, 79, 79);
+}
+
+.gap-10 {
+  gap: 6rem;
+}
+
+.clipped {
+  clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+}
+
+/* Aangepaste afbeelding bij over mij */
+.about-img {
+  max-width: 450px;
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.about-img:hover {
+  transform: scale(1.03);
+}
+
 /* Responsive tweaks */
 @media (max-width: 991px) {
   .header-inner {
@@ -96,6 +170,14 @@
     padding-left: 4vw;
     padding-right: 4vw;
   }
+
+  .gap-10 {
+    gap: 3rem !important;
+  }
+
+  .section-light .flex-fill:last-child {
+    margin-top: 2rem;
+  }
 }
 
 @media (max-width: 576px) {
@@ -107,68 +189,12 @@
     font-size: 1rem;
     padding: 0.5rem 1.2rem;
   }
-  .gap-10{
-    gap: 1rem !important;
+
+  .gap-10 {
+    gap: 2rem !important;
   }
-}
 
-/* Afwisselende sections */
-.section-light {
-  background-color: #f9f9f9;
-  color: #222;
-}
-
-.section-dark {
-  background-color: #000000;
-  color: white;
-}
-
-/* Card responsive en animatie ondersteuning */
-.img-fluid {
-  max-width: 700px;
-  width: 100%;
-}
-
-.color-blue {
-  color: #252435;
-}
-
-/* Team cards */
-.card {
-  background: transparent;
-}
-
-.card-title {
-  margin-top: 0.5rem;
-  font-weight: 600;
-}
-
-.card-text {
-  color: #555;
-}
-
-/* Team fotos */
-.rounded-circle {
-  border-radius: 50% !important;
-  object-fit: cover;
-}
-.img-fluid{
-  min-width: 30vw;
-  max-width: 700px;
-  width: 100%;
-}
-.thin{
-  font-weight: 100;
-}
-.kop{
-  color: #33314a;
-}
-.soft-text{
-  color: rgb(79, 79, 79);
-}
-.gap-10{
-  gap: 6rem;
-}
-.clipped{
-  clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+  .about-img {
+    width: 70vw;
+  }
 }

@@ -1,7 +1,13 @@
+
 const express = require('express');
 const exphbs = require('express-handlebars');
 const app = express();
 require('dotenv').config();
+
+
+const contactRouter = require('./routes/contact');
+app.use(express.urlencoded({ extended: true }));
+app.use('/contact', contactRouter);
 
 const routes = require('./routes/index');
 

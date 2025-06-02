@@ -8,7 +8,7 @@
     </div>
     <div class="image-content position-relative gsap-right">
       <img 
-        src="https://images.unsplash.com/photo-1746950862748-df7d2c5af81d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+        src="https://images.unsplash.com/uploads/1413222992504f1b734a6/1928e537?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
         alt="Contact" 
         class="header-img"
       >
@@ -16,11 +16,11 @@
   </div>
 </header>
 
-
-
 <section class="section-light py-5">
   <div class="container">
-             <div class="row mb-5 text-center ">
+
+    <!-- Contactgegevens -->
+    <div class="row mb-5 text-center">
       <div class="col-md-4">
         <i class="bi bi-geo-alt-fill mb-2 color-purpl" style="font-size: 1.5rem;"></i>
         <p>Zedelgem, België</p>
@@ -34,34 +34,49 @@
         <p>+32 493 68 07 36</p>
       </div>
     </div>
+
     <div class="row">
-
+      <!-- Formulier -->
       <div class="col-lg-6 mb-4 gsap-left">
-
-
         <h2 class="mb-4">Stuur ons een bericht</h2>
-        <form>
+
+        {{#if success}}
+          <div class="alert alert-success">✅ Bedankt voor je bericht! We nemen snel contact op.</div>
+        {{/if}}
+
+        {{#if error}}
+          <div class="alert alert-danger">❌ Er ging iets mis bij het verzenden. Probeer het opnieuw.</div>
+        {{/if}}
+
+        <form action="/contact" method="POST">
           <div class="mb-3">
             <label for="naam" class="form-label">Naam</label>
-            <input type="text" class="form-control" id="naam" placeholder="Jouw naam">
+            <input type="text" class="form-control" id="naam" name="naam" placeholder="Jouw naam" required>
           </div>
           <div class="mb-3">
             <label for="email" class="form-label">E-mailadres</label>
-            <input type="email" class="form-control" id="email" placeholder="jij@example.com">
+            <input type="email" class="form-control" id="email" name="email" placeholder="jij@example.com" required>
           </div>
           <div class="mb-3">
             <label for="bericht" class="form-label">Bericht</label>
-            <textarea class="form-control" id="bericht" rows="5" placeholder="Typ hier je bericht..."></textarea>
+            <textarea class="form-control" id="bericht" name="bericht" rows="5" placeholder="Typ hier je bericht..." required></textarea>
           </div>
           <button type="submit" class="btn btn-gradient">Versturen</button>
         </form>
       </div>
+
+      <!-- Google Maps -->
       <div class="col-lg-6 gsap-right vert-align">
-        <img 
-          src="https://images.unsplash.com/photo-1746950862748-df7d2c5af81d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
-          alt="Locatie" 
-          class="img-fluid rounded shadow"
-        >
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5005.699828646313!2d3.162199676948266!3d51.14811873688603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c351f0919eb66d%3A0x4c9d3b8e8fcc6f23!2sTorhoutsesteenweg%2079%2C%208210%20Zedelgem!5e0!3m2!1snl!2sbe!4v1748884347407!5m2!1snl!2sbe"
+          width="600" 
+          height="450" 
+          class="rounded-4 w-100" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
       </div>
     </div>
   </div>
