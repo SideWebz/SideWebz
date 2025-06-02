@@ -13,9 +13,9 @@
   padding: 0.65rem 1.75rem;
   font-size: 1.125rem;
   font-weight: 600;
-  color: #252435 !important;
+  color: rgb(39, 39, 39) !important;
   background-color: white;
-  border: solid 2px #252435;
+  border: solid 2px white;
   border-radius: 50px;
   cursor: pointer;
   text-decoration: none;
@@ -23,10 +23,10 @@
 }
 
 .btn-gradient:hover {
-  color: rgb(255, 255, 255) !important;
-  background-color: #252435;
+  color: white !important;
+  background-color: transparent;
   text-decoration: none;
-  border: solid 2px #252435;
+  border: solid 2px white;
 }
 
 /* HEADER */
@@ -108,42 +108,44 @@
     padding: 0.5rem 1.2rem;
   }
 }
-/* Formulier styling */
-form .form-control {
-  border-radius: 10px;
-  padding: 0.75rem 1rem;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  transition: border-color 0.3s ease;
+
+/* Afwisselende sections */
+.section-light {
+  background-color: #f9f9f9;
+  color: #222;
 }
 
-form .form-control:focus {
-  border-color: #252435;
-  outline: none;
-  box-shadow: 0 0 0 0.2rem rgba(37, 36, 53, 0.2);
+.section-dark {
+  background-color: #000000;
+  color: white;
 }
 
-/* Contact icons styling */
-.bi {
-  display: block;
-  margin-bottom: 0.5rem;
+/* Card responsive en animatie ondersteuning */
+.img-fluid {
+  max-width: 700px;
+  width: 100%;
 }
 
-.contact-info p {
-  margin-bottom: 1rem;
-}
-
-/* Responsive padding */
-@media (max-width: 576px) {
-  form .form-control {
-    font-size: 0.95rem;
-  }
-}
-.vert-align{
-    display: flex;
-align-items: center; /* Verticaal centreren */
-  justify-content: center; /* Optioneel: horizontaal centreren */
-}
-.color-purpl{
+.color-blue {
   color: #252435;
+}
+
+/* Team cards */
+.card {
+  background: transparent;
+}
+
+.card-title {
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
+
+.card-text {
+  color: #555;
+}
+
+/* Team fotos */
+.rounded-circle {
+  border-radius: 50% !important;
+  object-fit: cover;
 }
