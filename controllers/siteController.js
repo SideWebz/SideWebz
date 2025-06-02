@@ -5,7 +5,7 @@ exports.home = (req, res) => {
 
 exports.over = (req, res) => {
   const currentYear = new Date().getFullYear();
-  res.render('over', { title: 'Over ons', stylesheet: 'over', year: currentYear });
+  res.render('over', { title: 'Over', stylesheet: 'over', year: currentYear });
 };
 
 exports.contact = (req, res) => {
