@@ -1,10 +1,8 @@
 body, html {
-  height: 100%;
   margin: 0;
   font-family: 'Inter', sans-serif !important;
   background: white;
   color: black;
-  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -17,6 +15,7 @@ body, html {
 main {
   flex: 1;
 }
+
 
 a {
   text-decoration: none !important;
@@ -115,22 +114,14 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 1000;
+  background-color: #121212; /* herhaal background zodat die over content heen staat */
 }
 
-/* Navbar zelf position relative zodat absolute kinderen zich erop baseren */
-.navbar {
-  position: relative;
-  background-color: #121212;
-  color: white;
-  padding: 1rem;
-}
 
-#scrollProgress {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 4px;
-  width: 0%;
-  background: linear-gradient(to right, #00bfff, #00ffcc);
-  z-index: 9999;
+body.menu-open {
+  overflow: hidden;
+  height: 100vh;
+  position: fixed;
+  width: 100%;
+  touch-action: none;
 }

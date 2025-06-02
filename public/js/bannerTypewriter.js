@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   for (let i = 0; i <= fullText.length; i++) {
     tl.to(textSpan, {
-      duration: 0.12,
+      duration: 0.15,
       textContent: fullText.slice(0, i),
       ease: 'none',
       overwrite: 'auto'
