@@ -12,3 +12,15 @@ exports.contact = (req, res) => {
   const currentYear = new Date().getFullYear();
   res.render('contact', { title: 'Contact', stylesheet: 'contact', year: currentYear });
 };
+
+const path = require('path');
+
+exports.privacy = (req, res) => {
+  const filePath = path.join(__dirname, '..', 'public', 'privacy.pdf');
+  res.download(filePath, 'privacy.pdf', (err) => {
+    if (err) {
+      console.error('Fout bij downloaden privacy.pdf:', err);
+      res.status(500).send('Kon het bestand niet downloaden.');
+    }
+  });
+};

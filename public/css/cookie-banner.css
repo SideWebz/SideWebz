@@ -1,0 +1,79 @@
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #252435;
+  color: white;
+  padding: 2rem;
+  z-index: 9999;
+  font-family: "Inter", sans-serif;
+  box-shadow: 0 -3px 12px rgba(0, 0, 0, 0.4);
+}
+
+.cookie-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.cookie-content h5 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.cookie-content p,
+.cookie-content label,
+.cookie-content a {
+  font-size: 1rem;
+  color: white;
+}
+
+.cookie-buttons .btn {
+  margin-right: 0.5rem;
+  background-color: transparent; /* zwart is nogal fel, transparant past beter bij dark bg */
+  color: white;
+  border-radius: 15px;
+  border: 2px solid white;
+  padding: 0.3rem 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+}
+
+.cookie-buttons .btn-primary {
+  background-color: #6f42c1; /* paarsachtige tint passend bij je kleuren? */
+  border-color: #6f42c1;
+  color: white;
+}
+
+.cookie-buttons .btn-primary:hover {
+  background-color: #5936a0;
+  border-color: #5936a0;
+  color: #eee;
+}
+
+.cookie-buttons .btn-secondary {
+  background-color: transparent;
+  border-color: white;
+  color: white;
+}
+
+.cookie-buttons .btn-secondary:hover {
+  background-color: white;
+  color: #252435;
+  border-color: white;
+}
+
+.cookie-link {
+  display: inline-block;
+  margin-top: 1rem;
+  text-decoration: underline !important;
+  color: #ddd !important;
+  font-size: 0.9rem;
+}
+.cookie-info {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-top: 1rem;
+}

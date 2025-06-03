@@ -1,8 +1,30 @@
-<div id="cookie-banner" style="position: fixed; bottom: 0; width: 100%; background: #f8f9fa; padding: 1rem; text-align: center; box-shadow: 0 -2px 5px rgba(0,0,0,0.1); display: none; z-index: 10000;">
-  <p style="margin: 0; font-size: 0.95rem;">
-    We gebruiken cookies om je ervaring te verbeteren. Door verder te gaan, accepteer je ons <a href="/privacy" target="_blank">privacybeleid</a>.
-  </p>
-  <button id="accept-cookies" style="margin-top: 0.5rem; padding: 0.5rem 1rem; background-color: #0d6efd; color: white; border: none; border-radius: 5px; cursor: pointer;">
-    Akkoord
-  </button>
+<div id="cookie-banner" class="cookie-banner" style="display: none;">
+  <div class="cookie-content">
+    <h5>We gebruiken cookies</h5>
+    <p>We gebruiken cookies om je gebruikservaring te verbeteren. Je kunt zelf kiezen welke cookies je toelaat.</p>
+
+    <form id="cookie-form">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="analyticsCookies" />
+        <label class="form-check-label" for="analyticsCookies">
+          Analytische cookies (Google Analytics)
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="externalCookies" />
+        <label class="form-check-label" for="externalCookies">
+          Externe content (Google Maps)
+        </label>
+      </div>
+
+      <div class="cookie-buttons mt-3">
+        <button type="submit" class="btn btn-primary btn-sm">Opslaan</button>
+        <button type="button" class="btn btn-secondary btn-sm" id="acceptAll">Alles accepteren</button>
+      </div>
+    </form>
+    <p style="margin-top: 1rem; font-size: 0.9rem; color: #ccc;">
+  Je kunt je cookie-instellingen altijd aanpassen via de link onderaan elke pagina.
+    </p>
+    <a href="/privacy" target="_blank" class="cookie-link">Meer info in ons privacybeleid</a>
+  </div>
 </div>

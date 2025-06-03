@@ -5,5 +5,6 @@ const siteController = require('../controllers/siteController');
 router.get('/', siteController.home);
 router.get('/over', siteController.over);
 router.get('/contact', siteController.contact);
+router.get('/privacy', siteController.privacy)
 
 module.exports = router;
