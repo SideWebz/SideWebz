@@ -5,12 +5,12 @@ exports.home = (req, res) => {
 
 exports.over = (req, res) => {
   const currentYear = new Date().getFullYear();
-  res.render('over', { title: 'Over', stylesheet: 'over', year: currentYear });
+  res.render('over', { title: 'Sidewebz - Over', stylesheet: 'over', year: currentYear });
 };
 
 exports.contact = (req, res) => {
   const currentYear = new Date().getFullYear();
-  res.render('contact', { title: 'Contact', stylesheet: 'contact', year: currentYear });
+  res.render('contact', { title: 'Sidewebz - Contact', stylesheet: 'contact', year: currentYear });
 };
 
 const path = require('path');

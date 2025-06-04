@@ -2,7 +2,7 @@ const nodemailer = require('nodemailer');
 
 exports.showForm = (req, res) => {
   res.render('contact', {
-    title: 'Contact',
+    title: 'Sidewebz - Contact',
     stylesheet: 'contact',
     year: new Date().getFullYear(),
   });
@@ -10,10 +10,6 @@ exports.showForm = (req, res) => {
 
 exports.handleForm = async (req, res) => {
   const { naam, email, bericht } = req.body;
-
-console.log('EMAIL_USER:', process.env.EMAIL_USER);
-console.log('EMAIL_PASS:', process.env.EMAIL_PASS);
-
 
   try {
 const transporter = nodemailer.createTransport({

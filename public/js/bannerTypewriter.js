@@ -3,7 +3,12 @@ gsap.registerPlugin(TextPlugin);
 document.addEventListener('DOMContentLoaded', () => {
   const titleElement = document.getElementById('page-title');
   const rawText = titleElement.dataset.title || 'Welkom';
-  const fullText = rawText.toUpperCase(); // Altijd in hoofdletters
+  // Check op streepje, neem alles na het eerste koppelteken of de hele string
+  const processedText = rawText.includes('-')
+    ? rawText.split('-').slice(1).join('-').trim()
+    : rawText;
+
+  const fullText = processedText.toUpperCase(); // Altijd in hoofdletters
 
   // Maak typ-streepje aan
   const cursor = document.createElement('span');
