@@ -21,8 +21,8 @@ const transporter = nodemailer.createTransport({
   port: 587,
   secure: false, // Zorg dat dit op false staat voor STARTTLS (poort 587)
   auth: {
-    user: process.env.MAIL_USER,
-    pass: process.env.MAIL_PASS,
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
   },
   debug: true,
   logger: true,
