@@ -12,16 +12,18 @@ exports.handleForm = async (req, res) => {
   const { naam, email, bericht } = req.body;
 
   try {
-    const transporter = nodemailer.createTransport({
-      service: 'gmail',
-      port: 587,
-      auth: {
-        user: process.env.MAIL_USER,
-        pass: process.env.MAIL_PASS,
-      },
-      debug: true,
-      logger: true
-    });
+const transporter = nodemailer.createTransport({
+  host: 'smtp.gmail.com',
+  port: 587,
+  secure: false, // Zorg dat dit op false staat voor STARTTLS (poort 587)
+  auth: {
+    user: process.env.MAIL_USER,
+    pass: process.env.MAIL_PASS,
+  },
+  debug: true,
+  logger: true,
+});
+
 
     await transporter.sendMail({
       from: `"${naam}" <${email}>`,
