@@ -11,6 +11,10 @@ exports.showForm = (req, res) => {
 exports.handleForm = async (req, res) => {
   const { naam, email, bericht } = req.body;
 
+console.log('EMAIL_USER:', process.env.EMAIL_USER);
+console.log('EMAIL_PASS:', process.env.EMAIL_PASS);
+
+
   try {
 const transporter = nodemailer.createTransport({
   host: 'smtp.gmail.com',
