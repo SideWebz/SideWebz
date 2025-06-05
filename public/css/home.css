@@ -122,10 +122,21 @@
 }
 
 /* Card responsive en animatie ondersteuning */
-.img-fluid{
-  max-width: 700px;
-  width: 100%;
-}
+
 .color-purpl{
   color: #252435;
+}
+.flex-text {
+  flex: 2;
+}
+
+.flex-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.flex-image img {
+  max-width: 100%;
+  height: auto;
 }
