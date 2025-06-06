@@ -48,6 +48,10 @@
           <div class="alert alert-danger">❌ Er ging iets mis bij het verzenden. Probeer het opnieuw.</div>
         {{/if}}
 
+        {{#if rateLimitMessage}}
+          <div class="alert alert-warning">⚠️ {{rateLimitMessage}}</div>
+        {{/if}}
+
         <form action="/contact" method="POST">
           <div class="mb-3">
             <label for="naam" class="form-label">Naam</label>

@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const contactController = require('../controllers/contactController');
+const { contactRateLimiter } = require('../middleware/contactRateLimiter');
 
 router.get('/', contactController.showForm);
-router.post('/', contactController.handleForm);
+router.post('/', contactRateLimiter, contactController.handleForm);
 
 module.exports = router;
