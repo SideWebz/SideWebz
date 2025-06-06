@@ -1,7 +1,17 @@
 const rateLimitMap = new Map();
 
 const contactRateLimiter = (req, res, next) => {
-  const ip = req.ip;
+  // Pak het IP uit de header of socket
+  const rawIp = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
+
+  // Soms is het een lijst (bij proxies), pak dan de eerste (echte) client-IP
+  const ip = Array.isArray(rawIp)
+    ? rawIp[0]
+    : rawIp.split(',')[0].trim();
+
+  // Log het IP zodat je kunt controleren of het werkt
+  console.log(`[RateLimiter] IP van bezoeker: ${ip}`);
+
   const now = Date.now();
   const twentyFourHours = 24 * 60 * 60 * 1000;
 

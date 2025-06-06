@@ -4,6 +4,9 @@ const exphbs = require('express-handlebars');
 const app = express();
 require('dotenv').config();
 
+app.set('trust proxy', true);
+
+
 
 const contactRouter = require('./routes/contact');
 app.use(express.urlencoded({ extended: true }));
