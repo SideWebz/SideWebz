@@ -157,6 +157,10 @@
     flex-direction: column;
   }
 
+  .custom-header{
+      padding: 2rem 2vw;
+  }
+
   .text-content h1 {
     font-size: 2.25rem;
   }
