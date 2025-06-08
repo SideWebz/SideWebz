@@ -138,7 +138,6 @@
 
 /* Aangepaste afbeelding bij over mij */
 .about-img {
-  max-width: 450px;
   width: 100%;
   height: auto;
   border-radius: 1rem;
