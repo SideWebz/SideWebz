@@ -1,29 +1,45 @@
 <footer class="footer bg-darkgray text-white pt-5 pb-4">
   <div class="container">
-    <div class="row text-center text-md-start gap-4 gap-md-0 justify-content-between border-bottom pb-4">
-      <div class="col-12 col-md-4 mb-4 mb-md-0 footer-section socials d-flex justify-content-center justify-content-md-start gap-3">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#"><i class="fab fa-github"></i></a>
+    <!-- Bovenste rij: socials, navigatie, contact -->
+    <div class="row justify-content-between align-items-start border-bottom pb-4 text-center text-md-start">
+      <!-- Socials -->
+      <div class="col-12 col-md-4 mb-4 mb-md-0 d-flex justify-content-center justify-content-md-start gap-3">
+        <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="text-white"><i class="fab fa-github"></i></a>
       </div>
-      <div class="col-12 col-md-4 mb-4 mb-md-0 footer-section linksFooter d-flex flex-column align-items-center">
-        <a href="/">Home</a>
-        <a href="/over">Over ons</a>
-        <a href="/contact">Contact</a>
-        <a href="/privacy">Privacy</a>
+
+      <!-- Navigatielinks -->
+      <div class="col-12 col-md-4 mb-4 mb-md-0 d-flex flex-column align-items-center">
+        <a href="/" class="text-white mb-1">Home</a>
+        <a href="/over" class="text-white mb-1">Over ons</a>
+        <a href="/contact" class="text-white mb-1">Contact</a>
       </div>
-      <div class="col-12 col-md-4 footer-section contact text-center text-md-end">
-        <p>Email: vragen@sidewebz.be</p>
-        <p>Tel: +32 493 68 07 36</p>
-        <p>Btw: BE 1023859645</p>
+
+      <!-- Contactinfo -->
+      <div class="col-12 col-md-4 text-center text-md-end">
+        <p class="mb-1">Email: <a href="mailto:vragen@sidewebz.be" class="text-white">vragen@sidewebz.be</a></p>
+        <p class="mb-1">Tel: +32 493 68 07 36</p>
+        <p class="mb-0">Btw: BE 1023859645</p>
       </div>
     </div>
-    <p class="footer-bottom mt-4 text-center small">&copy; {{year}} Sidewebz. Alle rechten voorbehouden.</p> <br>
-        <div class="text-center">
+
+    <!-- Cookie button -->
+    <div class="text-center mt-4">
       <button id="cookie-settings-btn" class="btn btn-outline-light btn-sm rounded-5">
         Cookie-instellingen aanpassen
       </button>
     </div>
+
+    <!-- Juridische documenten -->
+    <div class="text-center mt-4 small text-white-50">
+      <a href="/privacy" class="text-white-50" download>Privacybeleid</a> |
+      <a href="/cookiebeleid" class="text-white-50" download>Cookiebeleid</a> |
+      <a href="/algemeen" class="text-white-50" download>Algemene voorwaarden</a>
+    </div>
+
+    <!-- Onderste copyright -->
+    <p class="footer-bottom mt-4 text-center small text-white-50 mb-0">&copy; {{year}} Sidewebz. Alle rechten voorbehouden.</p>
   </div>
 </footer>
