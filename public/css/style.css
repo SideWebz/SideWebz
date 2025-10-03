@@ -215,3 +215,11 @@ a.btn-arrow span {
 
 
 
+.white{
+  color: #D9D9D9;
+}
+.link-hover:hover {
+  color: #e8491d !important;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
