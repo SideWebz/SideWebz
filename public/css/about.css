@@ -20,3 +20,11 @@
   display: block;
   object-fit: cover;
 }
+.intro-text h2, .intro-text p {
+  color: white;
+}
+
+.stats h3, .stats p {
+  color: white;
+}
+

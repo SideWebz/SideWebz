@@ -1,19 +1,17 @@
 {
-  "name": "side",
+  "name": "sidewebz",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^16.5.0",
     "express": "^5.1.0",
-    "express-handlebars": "^8.0.3",
-    "nodemailer": "^7.0.3"
+    "express-handlebars": "^8.0.3"
   }
 }

@@ -1,0 +1,68 @@
+.header-section {
+      position: relative;
+      height: 100vh; /* hele schermhoogte */
+      overflow: hidden;
+    }
+    .header-img {
+      height: 65vh;
+      object-fit: cover;
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.4); /* donker overlay effect */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+    }
+      .section-img {
+      height: 60vh;
+      object-fit: cover;
+    }
+
+    .custom-header {
+  width: 100%;
+  height: 100vh; /* adjust if needed */
+}
+
+.custom-header-container {
+  width: 100%;
+  height: 100%;
+}
+
+.custom-header-img {
+  max-height: 60vh;
+  width: auto;
+  display: block;
+}
+
+.custom-header-text {
+  max-width: 50%; /* keeps text readable */
+}
+
+
+.header-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-img-2 {
+  object-fit: cover;
+  height: 60vh; /* of een vaste hoogte */
+}
+.section-img-2 {
+  position: absolute;
+  right: 0;      /* plakt de afbeelding rechts */  /* vult de volledige hoogte van de header */
+  object-fit: cover;
+  z-index: 1;    /* zorg dat de overlay er boven ligt */
+}
+.header-section-2{
+  position: relative;
+  height: 70vh; /* hele schermhoogte */
+  overflow: hidden;
+}

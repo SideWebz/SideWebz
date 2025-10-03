@@ -1,0 +1,217 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-VariableFont_opsz,wght.ttf') format('ttf');
+  font-weight: 1 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* ============================= */
+/*      Font Faces               */
+/* ============================= */
+
+/* Inter Thin */
+@font-face {
+  font-family: 'Inter-Thin';
+  src: url('/fonts/Inter_24pt-ExtraLight.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Inter Ultra Thin */
+@font-face {
+  font-family: 'Inter-UltraThin';
+  src: url('/fonts/Inter_18pt-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Inter Black */
+@font-face {
+  font-family: 'Inter-Black';
+  src: url('/fonts/Inter_24pt-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ============================= */
+/*      CSS Classes              */
+/* ============================= */
+
+.ultra-thin {
+  font-family: 'Inter-UltraThin', Arial, sans-serif;
+  font-weight: 100;
+}
+
+.thin {
+  font-family: 'Inter-Thin', Arial, sans-serif;
+  font-weight: 100;
+}
+
+.black {
+  font-family: 'Inter-Black', Arial, sans-serif;
+  font-weight: 900;
+}
+
+
+/* 2. Body font instellen */
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1C1C1C;
+  color: #D9D9D9;
+}
+.bg-lightdark {
+  background-color: #484848;
+}
+.py-small{
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+}
+.btn-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: #e8491d;
+  color: #D9D9D9;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative; /* belangrijk voor absolute positioning van arrow */
+  overflow: hidden;
+  gap: 0.5rem;
+}
+
+.btn-arrow .arrow {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: #D9D9D9;
+  color: #e8491d;
+  font-size: 1rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  position: absolute;  /* absolute binnen de knop */
+  left: 0.3rem;        /* start aan linkerkant */
+  transition: all 0.4s ease;
+}
+
+.btn-arrow .text {
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+  margin-left: 2rem; /* ruimte voor arrow */
+}
+
+.btn-arrow:hover .text {
+  opacity: 0;
+}
+
+.btn-arrow:hover .arrow {
+  left: calc(100% - 0.3rem - 32px); /* volledige knopbreedte minus padding en arrowbreedte */
+}
+.thin{
+  font-weight: 25;
+}
+
+h1{
+  font-size: clamp(2.5rem, 8vw, 10rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em; 
+}
+
+p {
+  font-size: clamp(1.1rem, 1.2vw, 2.2rem);
+  /* min 16px, schaalt mee, max 20px */
+  line-height: 1.6;
+}
+
+
+h2 {
+  font-size: clamp(1.5rem, 4vw, 3rem); /* min: 24px, max: 48px */
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: clamp(1.25rem, 3vw, 2.25rem); /* min: 20px, max: 36px */
+  line-height: 1.3;
+}
+
+h4 {
+  font-size: clamp(1rem, 2.0vw, 1.75rem); /* min: 16px, max: 28px */
+  line-height: 1.4;
+}
+
+h5 {
+  font-size: clamp(0.875rem, 2vw, 1.25rem); /* min: 14px, max: 20px */
+  line-height: 1.5;
+}
+
+h6 {
+  font-size: clamp(0.75rem, 1.5vw, 1rem); /* min: 12px, max: 16px */
+  line-height: 1.6;
+}
+
+button span,
+a.btn-arrow span {
+  font-size: clamp(1rem, 2vw, 1.5rem); 
+  /* min 16px, schaalt mee, max 24px */
+  font-weight: 600; /* iets dikker zodat het duidelijker is */
+  line-height: 1.2;
+}
+
+.we-pill{
+  border: 3px solid #D9D9D9;
+  border-radius: 500px;
+  padding: 0.1rem 1rem;
+  color: #D9D9D9;
+}
+.we-pill-orange{
+  border: 3px solid #e8491d;
+  border-radius: 500px;
+  padding: 0.1rem 1rem;
+  color: #e8491d;
+}
+.we-wrapper {
+  font-size: 0; /* verwijdert inline-block whitespace */
+  line-height: 0; /* geen extra hoogte */
+}
+
+.we-wrapper span {
+  display: inline-block;
+  line-height: 1.2;
+  margin: 0; /* alle gaps weg */
+  font-size: clamp(1.9rem, 4vw, 6rem);
+  /* min 20px, ideaal 4% van viewport breedte, max 48px */
+  font-weight: 300; /* optioneel voor extra impact */
+}
+
+.border-warning{
+  border: 3px solid #e8491d !important;
+}
+.text-light{
+  color: #D9D9D9 !important ;
+}
+.bottom-line{
+  border-bottom: 2px solid #ff4d00; /* jouw accentkleur */
+}
+.overlay{
+  background-color: transparent !important;
+  text-align: end !important;
+}
+.mb-10px{
+  margin-bottom: 10px !important;
+}
+
+
+

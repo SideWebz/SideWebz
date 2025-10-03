@@ -1,6 +1,0 @@
-# Algemene regels voor alle zoekmachines
-User-agent: *
-Disallow:
-
-# Sitemap voor betere indexering
-Sitemap: https://www.sidewebz.be/sitemap.xml
