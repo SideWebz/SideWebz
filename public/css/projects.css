@@ -4,7 +4,8 @@
       overflow: hidden;
     }
     .header-img {
-      height: 65vh;
+      max-height: 65vh;
+      max-width: 60vw;
       object-fit: cover;
     }
     .overlay {
@@ -20,49 +21,31 @@
       color: #fff;
       text-align: center;
     }
-      .section-img {
-      height: 60vh;
-      object-fit: cover;
-    }
-
-    .custom-header {
+    
+.overlay-container {
+  position: relative;
   width: 100%;
-  height: 100vh; /* adjust if needed */
+  height: auto; /* of een vaste hoogte als nodig */
 }
 
-.custom-header-container {
-  width: 100%;
-  height: 100%;
-}
-
-.custom-header-img {
-  max-height: 60vh;
-  width: auto;
+.mobile-img {
+  width: 90vw;
   display: block;
 }
 
-.custom-header-text {
-  max-width: 50%; /* keeps text readable */
+.text-overlay {
+  color: white;
+  text-align: center;
+  z-index: 2; /* boven de afbeelding */
 }
 
-
-.header-section {
-  position: relative;
-  overflow: hidden;
-}
-
-.section-img-2 {
-  object-fit: cover;
-  height: 60vh; /* of een vaste hoogte */
-}
-.section-img-2 {
+/* Optioneel: een lichte overlay achtergrond voor beter contrast */
+.text-overlay::before {
+  content: "";
   position: absolute;
-  right: 0;      /* plakt de afbeelding rechts */  /* vult de volledige hoogte van de header */
-  object-fit: cover;
-  z-index: 1;    /* zorg dat de overlay er boven ligt */
-}
-.header-section-2{
-  position: relative;
-  height: 70vh; /* hele schermhoogte */
-  overflow: hidden;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.3); /* donkerlaag over afbeelding */
+  z-index: -1;
+  border-radius: 200px;
 }
