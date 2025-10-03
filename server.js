@@ -63,20 +63,35 @@ app.get('/projects', (req, res) => {
 app.post('/send-message', async (req, res) => {
   const { name, email, company, message } = req.body;
 
+  // Check of verplichte velden ingevuld zijn
+  if (!name || !email || !message) {
+    return res.render('contact', {
+      title: 'Contact',
+      error: '❌ Vul alstublieft alle verplichte velden in.',
+      styles: '<link rel="stylesheet" href="/css/contact.css">'
+    });
+  }
+
   try {
-    // Transporter configureren (voorbeeld met Gmail)
+    // Nodemailer transporter configureren met timeout en TLS
     let transporter = nodemailer.createTransport({
-      service: 'gmail',
+      host: 'smtp.gmail.com',
+      port: 587,
+      secure: false, // STARTTLS
       auth: {
-    user: process.env.MAIL_USER,
-    pass: process.env.MAIL_PASS
-      }
+        user: process.env.MAIL_USER,
+        pass: process.env.MAIL_PASS
+      },
+      tls: {
+        rejectUnauthorized: false
+      },
+      connectionTimeout: 10000 // 10 sec
     });
 
     // Mail opties
     let mailOptions = {
       from: `"${name}" <${email}>`,
-      to: 'vragen@sidewebz.be', // waar jij de mails wil ontvangen
+      to: process.env.MAIL_RECEIVER || process.env.MAIL_USER, // fallback
       subject: `Nieuw bericht van ${name}`,
       html: `
         <h3>Nieuw bericht via je portfolio website</h3>
@@ -87,17 +102,27 @@ app.post('/send-message', async (req, res) => {
       `
     };
 
-    // Versturen
-    await transporter.sendMail(mailOptions);
-
-    res.render('contact', { 
-      title: 'Contact',
-      success: '✅ Bedankt! Je bericht is verstuurd.',
-      styles: '<link rel="stylesheet" href="/css/contact.css">'
+    // Versturen met callback zodat je errors direct kunt loggen
+    transporter.sendMail(mailOptions, (err, info) => {
+      if (err) {
+        console.error('Mailer error:', err);
+        return res.render('contact', {
+          title: 'Contact',
+          error: '❌ Er ging iets mis bij het verzenden. Probeer het later opnieuw.',
+          styles: '<link rel="stylesheet" href="/css/contact.css">'
+        });
+      }
+      console.log('Mailer success:', info);
+      res.render('contact', {
+        title: 'Contact',
+        success: '✅ Bedankt! Je bericht is verstuurd.',
+        styles: '<link rel="stylesheet" href="/css/contact.css">'
+      });
     });
+
   } catch (err) {
-    console.error(err);
-    res.render('contact', { 
+    console.error('Unexpected error:', err);
+    res.render('contact', {
       title: 'Contact',
       error: '❌ Er ging iets mis. Probeer het later opnieuw.',
       styles: '<link rel="stylesheet" href="/css/contact.css">'
@@ -105,6 +130,6 @@ app.post('/send-message', async (req, res) => {
   }
 });
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
   console.log(`Server draait op http://localhost:${port}`);
 });
